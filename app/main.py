@@ -8,7 +8,6 @@ from fastapi.middleware.cors import CORSMiddleware
 print(settings.secret_key)
 
 #models.Base.metadata.create_all(bind=engine)
-
 app = FastAPI()
 
 origins = ["*"]
