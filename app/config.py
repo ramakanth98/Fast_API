@@ -13,6 +13,10 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
 
+    @property
+    def database_url(self):
+        return f"postgresql://{self.database_username}:{self.database_password}@{self.database_hostname}:{self.database_port}/{self.database_name}"
+
 
 settings = Settings()    
 

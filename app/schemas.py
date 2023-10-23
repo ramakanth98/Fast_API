@@ -43,6 +43,7 @@ class TokenData(BaseModel):
 
 class Vote(BaseModel):
     post_id: int
-    dir: conint(le=1) #Vote is <=1 (le = less than or = to)
+    dir: conint(ge=0, le=1)
+ #Vote is <=1 (le = less than or = to)
 
 
